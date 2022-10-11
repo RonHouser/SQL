@@ -36,7 +36,10 @@ SELECT people.director, titles.title
 --  Answer: Jane Campion
 
 --  What is the oldest movie in the database and what year was it made?
-SELECT date_added, title, type
-    FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info" titles
-    ORDER BY date_added asc;
---  Answer: "To and From New York", 2008-01-01
+SELECT title, min(release_year) 
+    FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
+    WHERE type='Movie'
+    GROUP BY title, release_year
+    ORDER BY release_year asc
+    LIMIT 1;
+--  Answer: "The Battle of Midway", 1942
