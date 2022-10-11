@@ -1,4 +1,5 @@
--- Example query (PostgreSQL)
+-- Example query (PostgreSQL) from "https://bit.io/CharlotteChaze/BreakIntoTech"
+
 SELECT
 people.show_id,
 people.director,
