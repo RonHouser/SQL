@@ -19,7 +19,7 @@ SELECT count(*) title, type
 --  When was the most recent batch of tv shows and/or movies added to the database?
 SELECT date_added, title, type
     FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info" titles;
---  Answer:"2021-09-24"
+--  Answer:"2021-09-25"
 
 --  List all the movies and tv shows in alphabetical order.
 SELECT title
