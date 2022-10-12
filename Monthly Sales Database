@@ -1,41 +1,35 @@
 /*1. How many orders were placed in January?*/
 SELECT COUNT(*)
     FROM BIT_DB.JanSales;
-/*Answer: 9723*/
 
 /*2. How many of those orders were for an iPhone?*/
 SELECT count(*)
     FROM BIT_DB.JanSales
     WHERE product = "iPhone";
-/*Answer: 379*/
 
 /*3. Select the customer account numbers for all the orders that were placed in February.*/
 SELECT acctnum
     FROM BIT_DB.customers
     RIGHT JOIN BIT_DB.FebSales
     ON customers.order_id = FebSales.orderID;
-/*Answer: Run Script For Answer*/
 
 /*4. Which product was the cheapest one sold in January, and what was the price?*/
 SELECT DISTINCT price, product
     FROM BIT_DB.JanSales
     WHERE price IN (SELECT MIN(price)
     FROM BIT_DB.JanSales);
-/*Answer: 2.99	AAA, Batteries (4-pack)*/
 
 /*5. What is the total revenue for each product sold in January?*/
 SELECT product, ROUND(sum(quantity)*price, 2) as revenue
     FROM BIT_DB.JanSales
     GROUP BY product
     ORDER BY Revenue asc;
-/*Answer: Run Script For Answer*/
 
 /*6. Which products were sold in February at 548 Lincoln St, Seattle, WA 98101, how many of each were sold, and what was the total revenue?*/
 SELECT product, quantity, sum(quantity) * price as revenue
     FROM BIT_DB.FebSales
     Where location = "548 Lincoln St, Seattle, WA 98101"
     GROUP BY product;
-/*Answer: AA Batteries (4-pack), 2, 7.68*/
 
 /*7. How many customers ordered more than 2 products at a time in February, and what was the average amount spent for those customers?*/
 SELECT count(c.acctnum), ROUND(avg(quantity)*price, 2)
@@ -43,4 +37,9 @@ SELECT count(c.acctnum), ROUND(avg(quantity)*price, 2)
     LEFT JOIN BIT_DB.customers AS c
     ON C.order_id = F.orderID
     WHERE F.quantity > 2;
-/*Answer: 890, 3.86*/
+
+/*8. List all the products sold in Los Angeles in February, and include how many of each were sold.*/
+SELECT product, SUM(quantity)
+    FROM BIT_DB.FebSales
+    WHERE location like "%Los Angeles%"
+    GROUP BY product;
