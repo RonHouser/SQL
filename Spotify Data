@@ -36,13 +36,16 @@ SELECT artist_name, popularity
     ORDER BY popularity desc
     LIMIT 10;
 
-/*Which artist(s) has recorded the most songs and what were they?*/
-SELECT artist_name, count(artist_name) as c_a
-    FROM BIT_DB.Spotifydata
-    GROUP BY artist_name
-    ORDER BY c_a desc
-    LIMIT 3;
-SELECT artist_name, track_name
-    FROM BIT_DB.Spotifydata
-    WHERE artist_name = 'Olivia Rodrigo' OR artist_name = 'Doja Cat'
-    ORDER BY artist_name;
+
+/*The next example uses a CTE to accomplish the task.
+Label every artist with an average popularity of 90 or above as a “Top Star”.*/  
+
+WITH pop_avg AS
+  
+(    SELECT s.artist_name, AVG(s.popularity) AS AVG_Popularity
+        FROM SpotifyData AS s 
+        GROUP BY s.artist_name    )           
+                            
+SELECT  artist_name, AVG_Popularity, 'Top Star' AS tag
+    FROM pop_avg
+    WHERE AVG_Popularity >= 90;
