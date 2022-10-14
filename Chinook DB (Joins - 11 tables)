@@ -1,4 +1,7 @@
-/*1. Show Customers (their full names, customer ID, and country) who are not in the US.*/
+/*This example shows a series of possible inquiries using a Chinook Database.
+This particular database contained 11 tables
+
+1. Show Customers (their full names, customer ID, and country) who are not in the US.*/
 SELECT FirstName, LastName, CustomerId, Country 
     FROM chinook.customers 
     WHERE Country <> "USA";
