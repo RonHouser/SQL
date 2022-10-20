@@ -1,7 +1,7 @@
 /*
 Coming up with a few questions to demonstrate basic SQL techniques
 
-Skills Used: Aggregate Functions, Group By, Order By, Having, Case.
+Skills used: Aggregate Functions, Group By, Order By, Having, Case.
 */
 
 -- What were all the missions and how many astronauts shared in those missons?*/
