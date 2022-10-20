@@ -1,7 +1,9 @@
 /*
 Cleaning Data in SQL Queries.
+
 The following is an example of how I begin cleaning data.
-Includes: Convert, Alter, Update, Self Join, Isnull, Substring, Charindex, Parsename, Replace, Case, CTE
+
+Skills Used: Converting Data Types, Alter, Update, Self Join, Isnull, Substring, Charindex, Parsename, Replace, Case, CTE, Windows Functions, Aggregate Functions.
 */
 
 --------------------------------------------------------------------------------------------------------------------------
