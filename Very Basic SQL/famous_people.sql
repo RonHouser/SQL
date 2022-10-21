@@ -1,4 +1,4 @@
-/* Create table about the people and what they do here */
+-- Create table about the people and what they do.
 
 CREATE TABLE Famous_People (id INTEGER PRIMARY KEY AUTOINCREMENT,
 first_name TEXT,
@@ -37,7 +37,7 @@ INSERT INTO Profession VALUES (3, "Dancer");
 INSERT INTO Profession VALUES (4, "Model");
 INSERT INTO Profession VALUES (5, "Actor");
 
-/*What is the occupation of each famous person?*/
+-- What is the occupation of each famous person?
 
 SELECT f.first_name, f.last_name, p.title 
     FROM famous_people as f
