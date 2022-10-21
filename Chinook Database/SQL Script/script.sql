@@ -2,7 +2,7 @@
 The inquiries used below are examples of potential questions to consider when analyzing raw data. 
 This example showcases my thought process when looking into data and performing SQL commands to retrieve the necessary information.
 
-Skills used:
+Skills used: Joins, Alias, Aggregate Functions
 */
 
 -- 1. Show Customers (their full names, customer ID, and country) who are not in the US.
