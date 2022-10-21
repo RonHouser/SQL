@@ -1,3 +1,9 @@
+/*
+A few commands to explore the imported .csv file from Spotify
+
+Skills used: Aggregate functions, Group By, Order By, CTE
+*/
+
 --What is the avg popularity, danceability, and energy by artist and track
 SELECT AVG(popularity), AVG(danceability),  AVG(energy), artist_name, track_name
     FROM BIT_DB.Spotifydata
