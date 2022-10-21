@@ -3,4 +3,4 @@
 #### I created a table to insert the Spotify data into. 
 #### I chose a few questions to demonstrate analytics on the data using SQL.
 #### I inserted the Spotify Data .csv into the table. 
-#### I explored the data using the SQL below:
+#### I explored the data using a few SQL commands.
