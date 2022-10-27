@@ -1,4 +1,4 @@
-#### The goal of this project was to demonstrate my ability to create tables and import data. 
+## The goal of this project was to demonstrate my ability to create tables and import data. 
 #### In this example I sourced Spotify data from Kaggle. 
 #### I created a table to insert the Spotify data into. 
 #### I chose a few questions to demonstrate analysis on the data using SQL.
